@@ -1,0 +1,4 @@
+{{ ansible_managed | comment }}
+{% for rule in tftpd_mappings %}
+{{ rule.operation }} {{ rule.regex }} {{ rule.replacement }}
+{% endfor %}

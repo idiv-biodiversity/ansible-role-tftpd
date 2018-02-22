@@ -1,0 +1,9 @@
+---
+
+tftpd_service: no
+
+tftpd_root: '/var/lib/tftpboot'
+
+tftpd_mapfile: '/etc/tftp-mappings.conf'
+
+...
