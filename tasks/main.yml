@@ -22,15 +22,15 @@
     owner: root
     group: root
     mode: 0644
-  register: tftpd_configured
+  register: __tftpd_configuration
   tags:
     - tftpd-config
 
-- name: reload xinetd
+- name: reload xinetd # noqa 503
   service:
     name: xinetd
     state: reloaded
-  when: tftpd_configured.changed
+  when: __tftpd_configuration.changed
   tags:
     - tftpd-config
 
